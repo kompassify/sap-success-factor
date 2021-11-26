@@ -1,0 +1,33 @@
+{
+    "version": "1.2.1",
+    "short_name": "Kompassify SAP success-factor",
+    "manifest_version": 2,
+    "name": "Kompassify SAP success-factor",
+    "description": "This Plugin will inject the Kompassify deployement script in the SAP website",
+    "icons": {
+        "128": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_title": "Kompassify Player",
+        "default_icon": "icon.png"
+    },
+    "web_accessible_resources": [
+        "icon.png"
+    ]
+}
